@@ -1,0 +1,76 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@ashishrajak 
+Iqrakhan1
+/
+iqrakhan1
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+1
+Security
+Insights
+iqrakhan1/AI (artificial intelligence lab ) experiment/: Write a program to solve traveling salesman problem.
+@Iqrakhan1
+Iqrakhan1 Create : Write a program to solve traveling salesman problem.
+Latest commit b3a4ae8 7 minutes ago
+ History
+ 1 contributor
+33 lines (32 sloc)  969 Bytes
+
+ Write a program to solve traveling salesman problem.
+ 
+ The following is the simplified map used for the prototype:
+Program:
+Production Rules:-
+route(Town1,Town2,Distance) road(Town1,Town2,Distance). 
+route(Town1,Town2,Distance)
+road(Town1,X,Dist1),route(X,Town2,Dist2),Distance=Dist1+Dist2, 
+domains
+town = symbol 
+distance = integer 
+predicates
+nondeterm road(town,town,distance) 
+nondeterm route(town,town,distance)
+clauses 
+road("tampa","houston",200).
+road("gordon","tampa",300).
+road("houston","gordon",100). 
+road("houston","kansas_city",120).
+road("gordon","kansas_city",130). 
+route(Town1,Town2,Distance):-
+road(Town1,Town2,Distance). 
+route(Town1,Town2,Distance):-
+road(Town1,X,Dist1), 
+route(X,Town2,Dist2), 
+Distance=Dist1+Dist2,!.
+Output:
+Goal:
+route("tampa", "kansas_city", X),
+write("Distance from Tampa to Kansas City is ",X),nl.
+Distance from Tampa to Kansas City is 320 
+X=320
+OUTCOME: Student will implement travelling salesmen problem using prolog
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+iqrakhan1/: Write a program to solve traveling salesman problem. at master · Iqrakhan1/iqrakhan1
